@@ -1,0 +1,20 @@
+{
+  "display_name": "Game of Throws",
+  "yahoo_league_id": "",
+  "current_league_key": "",
+  "names": {},
+  "merge": {},
+  "legacy_weights": {
+    "title": 12,
+    "runner_up": 5,
+    "playoff_appearance": 1.5,
+    "net_regular_season_win": 0.25,
+    "last_place": -2
+  },
+  "power_weights": {
+    "record": 0.30,
+    "strength": 0.45,
+    "form": 0.25,
+    "form_weeks": 3
+  }
+}

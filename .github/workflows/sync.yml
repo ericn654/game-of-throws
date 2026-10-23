@@ -1,0 +1,82 @@
+name: Sync league
+
+on:
+  schedule:
+    - cron: "17 14 * * 2"   # Tuesdays ~7am Pacific, after Monday Night Football
+    - cron: "17 14 * * 5"   # Fridays, picks up Thursday night games
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Refetch every season (not just the current one)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
+      YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
+      YAHOO_LEAGUE_ID: ${{ vars.YAHOO_LEAGUE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unlock Yahoo token
+        run: |
+          if [ ! -f .yahoo/token.enc ]; then
+            echo "::error::Yahoo isn't connected yet. Run the 'Connect Yahoo' workflow first."
+            exit 1
+          fi
+          RT=$(openssl enc -d -aes-256-cbc -pbkdf2 -in .yahoo/token.enc -pass env:YAHOO_CLIENT_SECRET)
+          echo "::add-mask::$RT"
+          echo "YAHOO_REFRESH_TOKEN=$RT" >> $GITHUB_ENV
+
+      - name: Run tests
+        run: python3 -m unittest discover -s tests
+
+      - name: Pull from Yahoo
+        id: fetch
+        env:
+          NEW_TOKEN_FILE: /tmp/new_rt
+        run: python3 sync/fetch.py ${{ inputs.full && '--full' || '' }}
+
+      - name: Build stats
+        run: python3 sync/stats.py
+
+      - name: Save data
+        run: |
+          if [ "${{ steps.fetch.outputs.token_rotated }}" = "true" ]; then
+            openssl enc -aes-256-cbc -pbkdf2 -salt -in /tmp/new_rt -out .yahoo/token.enc -pass env:YAHOO_CLIENT_SECRET
+            shred -u /tmp/new_rt
+          fi
+          git config user.name "league-bot"
+          git config user.email "league-bot@users.noreply.github.com"
+          git add data .yahoo/token.enc
+          git diff --cached --quiet || git commit -m "Sync league data $(date -u +%Y-%m-%d)"
+          git push
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,66 @@
+name: Connect Yahoo
+
+# Run once (Actions tab -> Connect Yahoo -> Run workflow).
+#  1. Run it with the code box empty: the log prints the Yahoo sign-in link.
+#  2. Open the link, approve, copy the code= value from the page you land on.
+#  3. Run it again and paste that code. The refresh token is saved encrypted.
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "Yahoo authorization code (leave empty to get the sign-in link)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    env:
+      YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
+      YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
+      CODE: ${{ inputs.code }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check secrets
+        run: |
+          if [ -z "$YAHOO_CLIENT_ID" ] || [ -z "$YAHOO_CLIENT_SECRET" ]; then
+            echo "::error::Add YAHOO_CLIENT_ID and YAHOO_CLIENT_SECRET under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Print sign-in link
+        if: ${{ inputs.code == '' }}
+        run: |
+          python3 -c "import sys; sys.path.insert(0,'sync'); import yahoo, os; print('\nOpen this link, approve, then copy the code= value from the address bar:\n\n' + yahoo.auth_url(os.environ['YAHOO_CLIENT_ID']) + '\n')"
+          echo "### Open this link and approve access" >> $GITHUB_STEP_SUMMARY
+          python3 -c "import sys; sys.path.insert(0,'sync'); import yahoo, os; print(yahoo.auth_url(os.environ['YAHOO_CLIENT_ID']))" >> $GITHUB_STEP_SUMMARY
+
+      - name: Exchange code and save encrypted token
+        if: ${{ inputs.code != '' }}
+        run: |
+          echo "::add-mask::$CODE"
+          python3 - <<'EOF'
+          import os, sys
+          sys.path.insert(0, "sync")
+          import yahoo
+          tok = yahoo.exchange_code(os.environ["YAHOO_CLIENT_ID"], os.environ["YAHOO_CLIENT_SECRET"], os.environ["CODE"])
+          rt = tok.get("refresh_token")
+          if not rt:
+              raise SystemExit("Yahoo did not return a refresh token: " + str({k: v for k, v in tok.items() if "token" not in k}))
+          print(f"::add-mask::{rt}")
+          open("/tmp/rt", "w").write(rt)
+          EOF
+          mkdir -p .yahoo
+          openssl enc -aes-256-cbc -pbkdf2 -salt -in /tmp/rt -out .yahoo/token.enc -pass env:YAHOO_CLIENT_SECRET
+          shred -u /tmp/rt
+          git config user.name "league-bot"
+          git config user.email "league-bot@users.noreply.github.com"
+          git add .yahoo/token.enc
+          git commit -m "Connect Yahoo account"
+          git push
+          echo "Connected. Now run the 'Sync league' workflow." >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Game of Throws</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f1ea;--panel:#ffffff;--panel2:#f9f7f2;--ink:#14181f;--muted:#5f6672;--line:#e3ddd0;
+  --brand:#0f3d2e;--brand-ink:#ffffff;--gold:#b8892b;--good:#1f7a4d;--bad:#b23a3a;--bar:#d9d2c3;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 4px 14px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1014;--panel:#151a20;--panel2:#1b2129;--ink:#eef1f4;--muted:#9aa3ae;--line:#262e38;
+  --brand:#174f3c;--brand-ink:#f3f6f4;--gold:#e0b357;--good:#4cc38a;--bad:#ef6b6b;--bar:#2b333d;
+  --shadow:none;}}
+:root[data-theme="dark"]{
+  --bg:#0d1014;--panel:#151a20;--panel2:#1b2129;--ink:#eef1f4;--muted:#9aa3ae;--line:#262e38;
+  --brand:#174f3c;--brand-ink:#f3f6f4;--gold:#e0b357;--good:#4cc38a;--bad:#ef6b6b;--bar:#2b333d;--shadow:none;}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 Inter,system-ui,sans-serif;
+  padding-bottom:calc(76px + env(safe-area-inset-bottom));-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header{background:var(--brand);color:var(--brand-ink);padding:22px 0 18px}
+header .eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+header h1{font:700 30px/1.05 Oswald,sans-serif;letter-spacing:.02em;margin:4px 0 0;text-transform:uppercase}
+header .sub{font-size:13px;opacity:.8;margin-top:6px}
+h2{font:700 20px/1.1 Oswald,sans-serif;text-transform:uppercase;letter-spacing:.03em;margin:26px 0 10px}
+h3{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:18px 0 8px;font-weight:600}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:14px}
+.grid{display:grid;gap:10px}
+@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}}
+.muted{color:var(--muted)}
+.small{font-size:12.5px}
+.num{font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 7px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);color:var(--muted)}
+.pill.gold{color:var(--gold);border-color:color-mix(in srgb,var(--gold) 40%,transparent)}
+.hero{background:linear-gradient(135deg,var(--brand),color-mix(in srgb,var(--brand) 70%,#000));color:var(--brand-ink);border:none}
+.hero .big{font:700 34px/1 Oswald,sans-serif;text-transform:uppercase}
+.hero .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--line);
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:10}
+nav .row{display:flex;max-width:860px;margin:0 auto}
+nav a{flex:1;text-align:center;text-decoration:none;font-size:11px;font-weight:600;color:var(--muted);padding:6px 2px;border-radius:8px}
+nav a svg{display:block;margin:0 auto 2px;width:20px;height:20px}
+nav a.on{color:var(--brand)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav a.on{color:var(--gold)}}
+:root[data-theme="dark"] nav a.on{color:var(--gold)}
+.list .item{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+.list .item:first-child{border-top:none}
+.rank{width:26px;text-align:center;font:700 18px Oswald,sans-serif;color:var(--muted)}
+.who{flex:1;min-width:0}
+.who b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.who span{font-size:12.5px;color:var(--muted)}
+.score{font:700 20px Oswald,sans-serif;text-align:right}
+.score small{display:block;font:500 10px Inter;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.up{color:var(--good)}.down{color:var(--bad)}
+.bars{display:grid;grid-template-columns:auto 1fr auto;gap:3px 8px;align-items:center;font-size:11.5px;color:var(--muted);margin-top:8px}
+.bar{height:6px;background:var(--bar);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--brand)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .bar i{background:var(--gold)}}
+:root[data-theme="dark"] .bar i{background:var(--gold)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:9px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);cursor:pointer;user-select:none;background:var(--panel2);position:sticky;top:0}
+th.sorted{color:var(--ink)}
+td:first-child,th:first-child{text-align:left;position:sticky;left:0;background:var(--panel);z-index:1}
+th:first-child{background:var(--panel2);z-index:2}
+tr:last-child td{border-bottom:none}
+.item.me{background:color-mix(in srgb,var(--gold) 10%,transparent);margin:0 -14px;padding-left:14px;padding-right:14px}
+tr.me td{background:color-mix(in srgb,var(--gold) 10%,var(--panel))}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+select,button.tog{font:inherit;font-size:14px;padding:8px 10px;border-radius:9px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+button.tog.on{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.banner{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:start}
+.banner .yr{font:700 26px/1 Oswald,sans-serif;color:var(--gold)}
+.banner .champ{font:700 19px/1.15 Oswald,sans-serif;text-transform:uppercase}
+.kv{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--muted);margin-top:6px}
+.kv b{color:var(--ink);font-weight:600}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;text-align:center}
+.vs .side b{display:block;font:700 18px Oswald,sans-serif;text-transform:uppercase}
+.vs .side .rec{font:700 40px/1 Oswald,sans-serif}
+.empty{padding:22px;text-align:center;color:var(--muted)}
+.mlink{text-decoration:none;border-bottom:1px dotted var(--muted)}
+.foot{font-size:12px;color:var(--muted);margin:24px 0 8px}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.stat div{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.stat b{display:block;font:700 22px Oswald,sans-serif}
+.stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.back{display:inline-block;margin-top:16px;font-size:13px;color:var(--muted);text-decoration:none}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="eyebrow" id="eyebrow">League Hall of Fame</div>
+  <h1 id="title">Game of Throws</h1>
+  <div class="sub" id="sub"></div>
+</div></header>
+<main class="wrap" id="app"><div class="empty">Loading…</div></main>
+<nav><div class="row" id="nav"></div></nav>
+<script>
+const ICONS={
+ home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
+ standings:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>',
+ power:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
+ history:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 6h3a3 3 0 0 1-3 4M7 6H4a3 3 0 0 0 3 4"/></svg>',
+ rivals:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 17.5L3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M9.5 17.5L21 6V3h-3L6.5 14.5M11 19l-6-6M8 16l-4 4"/></svg>',
+ records:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>'};
+const TABS=[["home","Home"],["standings","All-time"],["power","Power"],["history","Banners"],["rivals","Rivals"],["records","Records"]];
+let D=null; const ME=(new URLSearchParams(location.search).get("me")||localStorage.getItem("got_me")||"").toLowerCase();
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const f1=n=>(+n).toFixed(1), f2=n=>(+n).toFixed(2);
+const pct=n=>(+n).toFixed(3).replace(/^0/,"");
+const rec=o=>`${o.w}–${o.l}${o.t?"–"+o.t:""}`;
+const M=id=>D.managers.find(m=>m.id===id);
+const mname=id=>(M(id)||{}).name||id;
+const mlink=id=>`<a class="mlink" href="#m/${encodeURIComponent(id)}">${esc(mname(id))}</a>`;
+const isMe=m=>ME&&m&&m.name.toLowerCase()===ME;
+
+function nav(cur){ $("#nav").innerHTML=TABS.map(([k,l])=>`<a href="#${k}" class="${cur===k?"on":""}">${ICONS[k]}${l}</a>`).join(""); }
+
+async function boot(){
+  try{ D=await (await fetch("data.json",{cache:"no-store"})).json(); }
+  catch(e){ $("#app").innerHTML='<div class="empty">No data yet. The first sync hasn’t run.</div>'; return; }
+  const L=D.league;
+  $("#title").textContent=L.name; document.title=L.name;
+  $("#sub").textContent=`${L.seasons_played} seasons · ${D.managers.length} managers · since ${L.first_season}`;
+  const when=new Date(D.generated_at);
+  $("#eyebrow").textContent=`Updated ${when.toLocaleDateString(undefined,{month:"short",day:"numeric"})}`;
+  window.addEventListener("hashchange",route); route();
+}
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1))||"home";
+  const [page,arg]=h.split("/");
+  nav(page==="m"?"standings":page);
+  const fn={home,standings,power,history,rivals,records,m:manager}[page]||home;
+  $("#app").innerHTML=fn(arg); window.scrollTo(0,0); wire(page);
+}
+
+/* ---------- home ---------- */
+function home(){
+  const done=D.seasons.filter(s=>s.finished&&s.champion);
+  const last=done[done.length-1];
+  const ps=D.power[String(D.league.latest_season)];
+  const wks=ps?Object.keys(ps.weeks).map(Number).sort((a,b)=>a-b):[];
+  const top=wks.length?ps.weeks[wks[wks.length-1]].slice(0,5):[];
+  const legacy=D.managers.slice(0,5);
+  let h="";
+  if(last){ h+=`<div class="card hero" style="margin-top:16px">
+    <div class="label">Reigning champion · ${last.season}</div>
+    <div class="big" style="margin:6px 0 4px">${esc(last.champion.name)}</div>
+    <div style="opacity:.85">${esc(last.champion.team)}${last.title_game?` · won ${f2(last.title_game.winner_points)}–${f2(last.title_game.loser_points)} over ${esc(last.title_game.loser_name)}`:""}</div></div>`;}
+  if(top.length){ h+=`<h2>Power rankings · Week ${wks[wks.length-1]}</h2><div class="card list">${top.map(r=>powerRow(r,false)).join("")}
+    <div style="padding-top:10px"><a href="#power" class="small muted">Full rankings →</a></div></div>`; }
+  h+=`<h2>Legacy leaders</h2><div class="card list">${legacy.map(m=>`<div class="item ${isMe(m)?"me":""}">
+     <div class="rank">${m.legacy_rank}</div><div class="who"><b>${mlink(m.id)}</b><span>${rec(m)} · ${m.titles}× champ · ${m.runner_ups} finals lost</span></div>
+     <div class="score">${f1(m.legacy)}<small>Legacy</small></div></div>`).join("")}
+     <div style="padding-top:10px"><a href="#standings" class="small muted">All-time standings →</a></div></div>`;
+  const champs={}; D.seasons.forEach(s=>{ if(s.champion) champs[s.champion.id]=(champs[s.champion.id]||0)+1; });
+  h+=`<h2>Ring count</h2><div class="card">${Object.entries(champs).sort((a,b)=>b[1]-a[1]).map(([id,n])=>`<span class="pill gold" style="margin:3px">${esc(mname(id))} ${"🏆".repeat(n)}</span>`).join("")}</div>`;
+  return h+foot();
+}
+
+/* ---------- all-time standings ---------- */
+const COLS=[["name","Manager"],["legacy","Legacy"],["seasons","Yrs"],["w","W–L"],["pct","Win%"],["titles","🏆"],["runner_ups","2nd"],["playoff_apps","Playoffs"],["po","Playoff W–L"],["ppg","PPG"],["allplay_pct","All-play"],["luck","Luck"],["lasts","Last"],["trades","Trades"]];
+let sortKey="legacy",sortDir=-1,activeOnly=false;
+function standings(){
+  return `<h2>All-time standings</h2>
+  <div class="controls"><button class="tog ${activeOnly?"on":""}" id="active">Current managers only</button>
+   <span class="small muted">Tap a column to sort</span></div>
+  <div class="tablewrap" id="tbl">${standingsTable()}</div>
+  <p class="small muted">Legacy = ${legacyFormula()}. All-play = how often your weekly score would have beaten every other team. Luck = actual win% minus all-play win%.</p>`+foot();
+}
+function standingsTable(){
+  let rows=D.managers.filter(m=>!activeOnly||m.latest===D.league.latest_season);
+  const val=(m,k)=>k==="po"?m.po_w-m.po_l:k==="w"?m.w-m.l:k==="name"?m.name.toLowerCase():m[k];
+  rows=[...rows].sort((a,b)=>{const x=val(a,sortKey),y=val(b,sortKey);return (x>y?1:x<y?-1:0)*sortDir;});
+  return `<table><thead><tr>${COLS.map(([k,l])=>`<th data-k="${k}" class="${k===sortKey?"sorted":""}">${l}${k===sortKey?(sortDir<0?" ↓":" ↑"):""}</th>`).join("")}</tr></thead><tbody>
+  ${rows.map(m=>`<tr class="${isMe(m)?"me":""}"><td>${mlink(m.id)}</td><td class="num"><b>${f1(m.legacy)}</b></td><td class="num">${m.seasons}</td><td class="num">${rec(m)}</td><td class="num">${pct(m.pct)}</td><td class="num">${m.titles||""}</td><td class="num">${m.runner_ups||""}</td><td class="num">${m.playoff_apps}/${m.finished_seasons}</td><td class="num">${m.po_w}–${m.po_l}</td><td class="num">${f1(m.ppg)}</td><td class="num">${pct(m.allplay_pct)}</td><td class="num ${m.luck>0.02?"up":m.luck<-0.02?"down":""}">${m.luck>0?"+":""}${(m.luck*100).toFixed(1)}</td><td class="num">${m.lasts||""}</td><td class="num">${m.trades}</td></tr>`).join("")}</tbody></table>`;
+}
+function legacyFormula(){ const w=D.formulas.legacy;
+  return `${w.title}×titles + ${w.runner_up}×finals lost + ${w.playoff_appearance}×playoff trips + ${w.net_regular_season_win}×(wins − losses) ${w.last_place<0?"− "+(-w.last_place):"+ "+w.last_place}×last places`; }
+
+/* ---------- power ---------- */
+let pSeason=null,pWeek=null;
+function powerRow(r,full){
+  const mv=r.move?`<span class="${r.move>0?"up":"down"} small">${r.move>0?"▲":"▼"}${Math.abs(r.move)}</span>`:"";
+  return `<div class="item ${isMe(M(r.id))?"me":""}"><div class="rank">${r.rank}</div>
+   <div class="who"><b>${esc(r.team)}</b><span>${mlink(r.id)} · ${rec(r)} ${mv}</span>
+   ${full?`<div class="bars"><span>Record</span><div class="bar"><i style="width:${r.record}%"></i></div><span class="num">${f1(r.record)}</span>
+   <span>Strength</span><div class="bar"><i style="width:${r.strength}%"></i></div><span class="num">${f1(r.strength)}</span>
+   <span>Form</span><div class="bar"><i style="width:${r.form}%"></i></div><span class="num">${f1(r.form)}</span></div>
+   <div class="small muted" style="margin-top:4px">Luck: ${r.luck>0?"+":""}${f1(r.luck)} wins vs. all-play</div>`:""}</div>
+   <div class="score">${f1(r.power)}<small>Power</small></div></div>`;
+}
+function power(){
+  const seasons=Object.keys(D.power).map(Number).sort((a,b)=>b-a);
+  if(!seasons.length) return '<div class="empty">No games yet.</div>';
+  pSeason=pSeason||seasons[0];
+  const wk=Object.keys(D.power[pSeason].weeks).map(Number).sort((a,b)=>a-b);
+  if(!wk.length) return '<div class="empty">No completed weeks yet.</div>';
+  if(!pWeek||!wk.includes(pWeek)) pWeek=wk[wk.length-1];
+  const w=D.formulas.power;
+  return `<h2>Power rankings</h2><div class="controls">
+   <select id="pseason">${seasons.map(s=>`<option ${s==pSeason?"selected":""}>${s}</option>`).join("")}</select>
+   <select id="pweek">${wk.map(x=>`<option value="${x}" ${x==pWeek?"selected":""}>After week ${x}</option>`).join("")}</select></div>
+   <div class="card list">${D.power[pSeason].weeks[pWeek].map(r=>powerRow(r,true)).join("")}</div>
+   <p class="small muted">Power = ${Math.round(w.record*100)}% record (pulled toward .500 early) + ${Math.round(w.strength*100)}% strength (all-play win rate) + ${Math.round(w.form*100)}% form (all-play over the last ${w.form_weeks} weeks). Regular season only.</p>`+foot();
+}
+
+/* ---------- history ---------- */
+function history(){
+  const ss=[...D.seasons].reverse();
+  return `<h2>Every banner</h2><div class="grid">${ss.map(s=>`<div class="card banner"><div class="yr">${s.season}</div><div>
+   ${s.champion?`<div class="pill gold">Champion</div><div class="champ" style="margin-top:4px">${mlink(s.champion.id)}</div><div class="small muted">${esc(s.champion.team)}</div>`:`<div class="pill">In progress · week ${s.current_week}</div>`}
+   <div class="kv">
+    ${s.title_game?`<span>Final <b>${f2(s.title_game.winner_points)}–${f2(s.title_game.loser_points)}</b> over ${mlink(s.title_game.loser)}</span>`:s.runner_up?`<span>Runner-up <b>${esc(s.runner_up.name)}</b></span>`:""}
+    ${s.regular_season_leader?`<span>Best record <b>${esc(s.regular_season_leader.name)}</b></span>`:""}
+    ${s.top_scorer?`<span>Most points <b>${esc(s.top_scorer.name)}</b> (${f1(s.top_scorer.pf)})</span>`:""}
+    ${s.last&&s.finished?`<span>Last <b>${esc(s.last.name)}</b></span>`:""}
+   </div></div></div>`).join("")}</div>`+foot();
+}
+
+/* ---------- rivals ---------- */
+let rA=null,rB=null;
+function rivals(){
+  const ms=[...D.managers].sort((a,b)=>a.name.localeCompare(b.name));
+  if(!rA){ const me=D.managers.find(isMe); rA=(me||D.managers[0]).id; }
+  if(!rB||rB===rA){ const opp=topOpponents(rA)[0]; rB=opp?opp.id:(D.managers[1]||{}).id; }
+  const opt=sel=>ms.map(m=>`<option value="${esc(m.id)}" ${m.id===sel?"selected":""}>${esc(m.name)}</option>`).join("");
+  const h=D.h2h[`${rA}|${rB}`];
+  let body='<div class="empty">These two have never played.</div>';
+  if(h){ body=`<div class="card"><div class="vs">
+     <div class="side"><b>${esc(mname(rA))}</b><div class="rec">${h.w}</div></div><div class="muted">vs</div>
+     <div class="side"><b>${esc(mname(rB))}</b><div class="rec">${h.l}</div></div></div>
+     <div class="stat"><div><b>${f1(h.pf/(h.w+h.l+h.t))}</b><span>${esc(mname(rA))} PPG</span></div>
+     <div><b>${h.po_w}–${h.po_l}</b><span>Playoffs</span></div>
+     <div><b>${f1(h.pa/(h.w+h.l+h.t))}</b><span>${esc(mname(rB))} PPG</span></div></div>
+     ${h.last?`<p class="small muted" style="margin:10px 0 0">Last meeting: ${h.last.season} week ${h.last.week}${h.last.playoffs?" (playoffs)":""} — ${f2(h.last.for)}–${f2(h.last.against)}</p>`:""}</div>`; }
+  const list=topOpponents(rA);
+  return `<h2>Head to head</h2><div class="controls"><select id="ra">${opt(rA)}</select><span class="muted">vs</span><select id="rb">${opt(rB)}</select></div>${body}
+   <h3>${esc(mname(rA))} against everyone</h3><div class="tablewrap"><table><thead><tr><th>Opponent</th><th>Record</th><th>Playoffs</th><th>Avg margin</th></tr></thead><tbody>
+   ${list.map(o=>`<tr><td><a class="mlink" href="#" data-opp="${esc(o.id)}">${esc(o.name)}</a></td><td class="num ${o.w>o.l?"up":o.w<o.l?"down":""}">${rec(o)}</td><td class="num">${o.po_w+o.po_l?o.po_w+"–"+o.po_l:""}</td><td class="num">${o.margin>0?"+":""}${f1(o.margin)}</td></tr>`).join("")}</tbody></table></div>`+foot();
+}
+function topOpponents(id){
+  return Object.entries(D.h2h).filter(([k])=>k.startsWith(id+"|")).map(([k,v])=>{
+    const oid=k.split("|")[1],g=v.w+v.l+v.t; return {...v,id:oid,name:mname(oid),g,margin:(v.pf-v.pa)/g};
+  }).sort((a,b)=>b.g-a.g||b.w-a.w);
+}
+
+/* ---------- records ---------- */
+function records(){
+  const R=D.records;
+  const wkRow=(r,i,margin)=>`<div class="item"><div class="rank">${i+1}</div><div class="who"><b>${mlink(r.id)}</b><span>${r.season} wk ${r.week}${r.playoffs?" · playoffs":""} · vs ${esc(r.opp_name)} (${f2(r.opp_points)})</span></div><div class="score">${margin?f2(r.points-r.opp_points):f2(r.points)}<small>${margin?"Margin":"Points"}</small></div></div>`;
+  const sRow=(r,i,k)=>`<div class="item"><div class="rank">${i+1}</div><div class="who"><b>${mlink(r.id)}</b><span>${r.season} · ${esc(r.team)} · ${rec(r)}</span></div><div class="score">${k==="ppg"?f1(r.ppg):pct(r.pct)}<small>${k==="ppg"?"PPG":"Win%"}</small></div></div>`;
+  const block=(t,rows,fn)=>`<h3>${t}</h3><div class="card list">${rows.length?rows.map(fn).join(""):'<div class="empty">—</div>'}</div>`;
+  return `<h2>Record book</h2><div class="grid two">
+   ${block("Highest scores",R.high_week,(r,i)=>wkRow(r,i))}
+   ${block("Lowest scores",R.low_week,(r,i)=>wkRow(r,i))}
+   ${block("Biggest blowouts",R.blowouts,(r,i)=>wkRow(r,i,true))}
+   ${block("Closest games",R.closest,(r,i)=>wkRow(r,i,true))}
+   ${block("Best regular seasons",R.best_seasons,(r,i)=>sRow(r,i))}
+   ${block("Most points per game",R.highest_ppg_seasons,(r,i)=>sRow(r,i,"ppg"))}
+   ${block("Worst regular seasons",R.worst_seasons,(r,i)=>sRow(r,i))}
+   </div>`+foot();
+}
+
+/* ---------- manager ---------- */
+function manager(id){
+  const m=M(id); if(!m) return '<div class="empty">Manager not found.</div>';
+  const lp=m.legacy_parts;
+  return `<a class="back" href="#standings">← All-time standings</a>
+  <h2 style="margin-top:8px">${esc(m.name)}</h2>
+  <div class="small muted">${m.seasons} seasons · ${m.first}–${m.latest} · Legacy rank #${m.legacy_rank}</div>
+  <div class="stat"><div><b>${rec(m)}</b><span>Record</span></div><div><b>${m.titles}</b><span>Titles</span></div><div><b>${m.playoff_apps}/${m.finished_seasons}</b><span>Playoffs</span></div>
+  <div><b>${pct(m.pct)}</b><span>Win%</span></div><div><b>${f1(m.ppg)}</b><span>PPG</span></div><div><b>${m.po_w}–${m.po_l}</b><span>Playoff W–L</span></div></div>
+  <h3>Legacy ${f1(m.legacy)}</h3><div class="card small">
+   Titles <b>${f1(lp.titles)}</b> · Finals lost <b>${f1(lp.runner_ups)}</b> · Playoff trips <b>${f1(lp.playoffs)}</b> · Net wins <b>${f1(lp.net_wins)}</b> · Last places <b>${f1(lp.last_places)}</b></div>
+  <h3>Season by season</h3><div class="tablewrap"><table><thead><tr><th>Season</th><th>Team</th><th>W–L</th><th>PF</th><th>All-play</th><th>Seed</th><th>Finish</th></tr></thead><tbody>
+  ${[...m.history].reverse().map(r=>`<tr><td>${r.season}</td><td style="text-align:left">${esc(r.team)}</td><td class="num">${rec(r)}</td><td class="num">${f1(r.pf)}</td><td class="num">${pct(r.allplay_pct)}</td><td class="num">${r.seed||""}</td><td>${r.in_progress?'<span class="pill">In progress</span>':r.finish==="Champion"?'<span class="pill gold">🏆 Champion</span>':esc(r.finish||"—")}</td></tr>`).join("")}
+  </tbody></table></div>
+  <p class="small"><a href="#" id="setme" class="muted">${isMe(m)?"✓ This is you":"This is me — highlight my rows"}</a></p>`+foot();
+}
+
+function foot(){ return `<div class="foot">Synced from Yahoo Fantasy · ${new Date(D.generated_at).toLocaleString()}</div>`; }
+
+function wire(page){
+  if(page==="standings"){
+    const t=$("#tbl"); t.onclick=e=>{const th=e.target.closest("th"); if(!th) return; const k=th.dataset.k;
+      if(k===sortKey) sortDir*=-1; else {sortKey=k; sortDir=k==="name"?1:-1;} t.innerHTML=standingsTable();};
+    $("#active").onclick=e=>{activeOnly=!activeOnly; e.target.classList.toggle("on",activeOnly); t.innerHTML=standingsTable();};
+  }
+  if(page==="power"){ $("#pseason")&&($("#pseason").onchange=e=>{pSeason=+e.target.value;pWeek=null;route();});
+    $("#pweek")&&($("#pweek").onchange=e=>{pWeek=+e.target.value;route();}); }
+  if(page==="rivals"){ $("#ra").onchange=e=>{rA=e.target.value;rB=null;route();}; $("#rb").onchange=e=>{rB=e.target.value;route();};
+    document.querySelectorAll("[data-opp]").forEach(a=>a.onclick=e=>{e.preventDefault();rB=a.dataset.opp;route();}); }
+  if(page==="m"){ const s=$("#setme"); if(s) s.onclick=e=>{e.preventDefault(); const m=M(decodeURIComponent(location.hash.split("/")[1]));
+    try{localStorage.setItem("got_me",m.name.toLowerCase());}catch(_){} location.reload();}; }
+}
+boot();
+</script>
+</body>
+</html>
