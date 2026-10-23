@@ -53,6 +53,7 @@ def auth_url(client_id, redirect_uri=DEFAULT_REDIRECT):
         "client_id": client_id,
         "redirect_uri": redirect_uri,
         "response_type": "code",
+        "scope": "fspt-r",
     })
     return f"{AUTH_URL}?{q}"
 
