@@ -27,6 +27,8 @@ async function yahooSeason(year, lid, gameKey, current) {
 
   const teams = {};
   const tp = await go(`${base}/teams`);
+  const head = [...tp.querySelectorAll("table thead th")].map(th => th.innerText.trim().toLowerCase());
+  const col = name => head.indexOf(name);
   for (const tr of tp.querySelectorAll("table tbody tr")) {
     const a = [...tr.querySelectorAll("a")].find(x => tid(x.getAttribute("href")) && x.innerText.trim());
     if (!a) continue;
@@ -36,7 +38,7 @@ async function yahooSeason(year, lid, gameKey, current) {
     if (!mgrs.length) mgrs = [`hidden-${t}~${((tr.querySelector("td.user-id") || {}).innerText || "Unknown").trim()}`];
     const cells = [...tr.querySelectorAll("td")].map(td => td.innerText.trim());
     teams[t] = [t, a.innerText.trim(), mgrs.join("^"), null, 0, 0, 0, 0, 0, 0,
-      num(cells[cells.length - 2]), num(cells[cells.length - 1])];
+      col("moves") >= 0 ? num(cells[col("moves")]) : 0, col("trades") >= 0 ? num(cells[col("trades")]) : 0];
   }
 
   const sp = await go(`${base}?lhst=stand`);
