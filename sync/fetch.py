@@ -129,6 +129,20 @@ def fetch_season(y, league_key, log=print):
 
 
 def current_league_key(y, league_id):
+    """Find this season's league key among the signed-in user's NFL leagues."""
+    try:
+        fc = y.get("users;use_login=1/games;game_codes=nfl/leagues")
+        found = []
+        for u in unwrap(fc.get("users"), "user"):
+            for g in unwrap(u.get("games"), "game"):
+                for lg in unwrap(g.get("leagues"), "league"):
+                    if str(lg.get("league_id")) == str(league_id):
+                        found.append((_int(g.get("season") or lg.get("season")), lg["league_key"]))
+        if found:
+            return max(found)[1]
+        print(f"League {league_id} not found among your leagues; trying game/nfl")
+    except RuntimeError as e:
+        print(f"League lookup failed ({e}); trying game/nfl")
     game = y.get("game/nfl").get("game", {})
     return f"{game['game_key']}.l.{league_id}"
 
