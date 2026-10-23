@@ -127,7 +127,7 @@ const isMe=m=>ME&&m&&m.name.toLowerCase()===ME;
 function nav(cur){ $("#nav").innerHTML=TABS.map(([k,l])=>`<a href="#${k}" class="${cur===k?"on":""}">${ICONS[k]}${l}</a>`).join(""); }
 
 async function boot(){
-  try{ D=await (await fetch("data.json",{cache:"no-store"})).json(); }
+  try{ D=await (await fetch("data.json?v="+Date.now(),{cache:"no-store"})).json(); }
   catch(e){ $("#app").innerHTML='<div class="empty">No data yet. The first sync hasn’t run.</div>'; return; }
   const L=D.league;
   $("#title").textContent=L.name; document.title=L.name;
