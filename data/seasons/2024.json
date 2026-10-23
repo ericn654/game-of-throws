@@ -1,0 +1,2034 @@
+{
+ "season": 2024,
+ "league_key": "449.l.535094",
+ "name": "Game of Throws VII",
+ "num_teams": 12,
+ "start_week": 1,
+ "end_week": 17,
+ "current_week": 17,
+ "is_finished": true,
+ "playoff_start_week": 15,
+ "num_playoff_teams": 6,
+ "renew": null,
+ "source": "yahoo-web",
+ "teams": [
+  {
+   "team_key": "449.l.535094.t.1",
+   "name": "Kylo Ren",
+   "managers": [
+    {
+     "guid": "eric243643",
+     "nickname": "Eric",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 2,
+   "playoff_seed": null,
+   "made_playoffs": true,
+   "wins": 9,
+   "losses": 5,
+   "ties": 0,
+   "points_for": 1570.8,
+   "points_against": 1419.34,
+   "moves": 118,
+   "trades": 2
+  },
+  {
+   "team_key": "449.l.535094.t.2",
+   "name": "FLY SAQUON FLY",
+   "managers": [
+    {
+     "guid": "mohit8212",
+     "nickname": "Mohit",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 6,
+   "playoff_seed": null,
+   "made_playoffs": true,
+   "wins": 9,
+   "losses": 5,
+   "ties": 0,
+   "points_for": 1551.34,
+   "points_against": 1426.42,
+   "moves": 27,
+   "trades": 1
+  },
+  {
+   "team_key": "449.l.535094.t.3",
+   "name": "Shannon Sharpe\u2019s Live",
+   "managers": [
+    {
+     "guid": "deric359",
+     "nickname": "deric",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 10,
+   "playoff_seed": null,
+   "made_playoffs": false,
+   "wins": 4,
+   "losses": 10,
+   "ties": 0,
+   "points_for": 1222.46,
+   "points_against": 1571.4,
+   "moves": 13,
+   "trades": 0
+  },
+  {
+   "team_key": "449.l.535094.t.4",
+   "name": "South Park Cows",
+   "managers": [
+    {
+     "guid": "mrcrow4",
+     "nickname": "Mr.Crow",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 4,
+   "playoff_seed": null,
+   "made_playoffs": true,
+   "wins": 8,
+   "losses": 6,
+   "ties": 0,
+   "points_for": 1498.74,
+   "points_against": 1349.6,
+   "moves": 36,
+   "trades": 0
+  },
+  {
+   "team_key": "449.l.535094.t.5",
+   "name": "Like A Good Naber",
+   "managers": [
+    {
+     "guid": "rich7360",
+     "nickname": "Rich",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 9,
+   "playoff_seed": null,
+   "made_playoffs": false,
+   "wins": 7,
+   "losses": 7,
+   "ties": 0,
+   "points_for": 1550.14,
+   "points_against": 1459.26,
+   "moves": 38,
+   "trades": 2
+  },
+  {
+   "team_key": "449.l.535094.t.6",
+   "name": "Pushin Preet\u2019s",
+   "managers": [
+    {
+     "guid": "preet5691",
+     "nickname": "Preet",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 11,
+   "playoff_seed": null,
+   "made_playoffs": false,
+   "wins": 6,
+   "losses": 8,
+   "ties": 0,
+   "points_for": 1280.5,
+   "points_against": 1525.78,
+   "moves": 26,
+   "trades": 0
+  },
+  {
+   "team_key": "449.l.535094.t.7",
+   "name": "Lasamuel Jackson",
+   "managers": [
+    {
+     "guid": "jawon266",
+     "nickname": "Jawon",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 7,
+   "playoff_seed": null,
+   "made_playoffs": false,
+   "wins": 8,
+   "losses": 6,
+   "ties": 0,
+   "points_for": 1485.04,
+   "points_against": 1526.02,
+   "moves": 12,
+   "trades": 0
+  },
+  {
+   "team_key": "449.l.535094.t.8",
+   "name": "Adith's Glock Purdys",
+   "managers": [
+    {
+     "guid": "adith257",
+     "nickname": "Adith",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 5,
+   "playoff_seed": null,
+   "made_playoffs": true,
+   "wins": 8,
+   "losses": 6,
+   "ties": 0,
+   "points_for": 1642.68,
+   "points_against": 1478.1,
+   "moves": 24,
+   "trades": 0
+  },
+  {
+   "team_key": "449.l.535094.t.9",
+   "name": "ALMIGHTY SAINT",
+   "managers": [
+    {
+     "guid": "saint502",
+     "nickname": "Saint",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 1,
+   "playoff_seed": null,
+   "made_playoffs": true,
+   "wins": 9,
+   "losses": 5,
+   "ties": 0,
+   "points_for": 1611.08,
+   "points_against": 1437.92,
+   "moves": 40,
+   "trades": 2
+  },
+  {
+   "team_key": "449.l.535094.t.10",
+   "name": "DAK IS BACK",
+   "managers": [
+    {
+     "guid": "abdul52670",
+     "nickname": "Abdul",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 12,
+   "playoff_seed": null,
+   "made_playoffs": false,
+   "wins": 2,
+   "losses": 12,
+   "ties": 0,
+   "points_for": 1173.64,
+   "points_against": 1563.8,
+   "moves": 18,
+   "trades": 1
+  },
+  {
+   "team_key": "449.l.535094.t.11",
+   "name": "Eren naeger",
+   "managers": [
+    {
+     "guid": "lawrence20476",
+     "nickname": "Lawrence",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 8,
+   "playoff_seed": null,
+   "made_playoffs": false,
+   "wins": 6,
+   "losses": 8,
+   "ties": 0,
+   "points_for": 1339.28,
+   "points_against": 1269.98,
+   "moves": 8,
+   "trades": 0
+  },
+  {
+   "team_key": "449.l.535094.t.12",
+   "name": "daniel jones",
+   "managers": [
+    {
+     "guid": "james117114",
+     "nickname": "james",
+     "is_commissioner": false
+    }
+   ],
+   "rank": 3,
+   "playoff_seed": null,
+   "made_playoffs": true,
+   "wins": 8,
+   "losses": 6,
+   "ties": 0,
+   "points_for": 1556.68,
+   "points_against": 1454.76,
+   "moves": 16,
+   "trades": 0
+  }
+ ],
+ "matchups": [
+  {
+   "week": 1,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 68.84
+    },
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 88.48
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 150.8
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 75.68
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 78.26
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 105.18
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 113.62
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 106.56
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 124.42
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 74.26
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 101.94
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 94.56
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 86.14
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 62.42
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.3",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 85.8
+    },
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 115.6
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 74.56
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 116.32
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 151.22
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 57.38
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.6",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 139.74
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 121.66
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 86.16
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 132.74
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.6",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 107.88
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 133.68
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 101.82
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 93.96
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.3",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 134.1
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 110.98
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 126.52
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 109.86
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 109.14
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 130.36
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 87.2
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 91.48
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 116.98
+    },
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 99.5
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 122.68
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 87.64
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 93.8
+    },
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 96.32
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.6",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 81.98
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 64.14
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 125.22
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 113.92
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 102.46
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 83.84
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 160.84
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 100.42
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 103.56
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 96.58
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.10",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 76.84
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 107.48
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.6",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 97.04
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 103.1
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 75.46
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 69.7
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 125.42
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 121.16
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 102.6
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 140.12
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 120.92
+    },
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 86.26
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.3",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 83.88
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 72.56
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 99.5
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 67.6
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 143.6
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 94.32
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 82.22
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 109.06
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 96.08
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 152.54
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 100.9
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 96.16
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 53.24
+    },
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 123.82
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 83.86
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 102.88
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 55.3
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 57.44
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 126.24
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 104.24
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 93.66
+    },
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 126.34
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 88.56
+    },
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 118.02
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.3",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 115.6
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 104.34
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 127.68
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 140.76
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 119.4
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 102.6
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 107.58
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 104.42
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 94.84
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 72.8
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 104.7
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 156.08
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 64.44
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 87.3
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 113.5
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 138.86
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.10",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 124.9
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 127.24
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 87.26
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 131.02
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 130.38
+    },
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 92.24
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 53.08
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 116.32
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 107.3
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 98.22
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.6",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 93.18
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 103.24
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 89
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 93.48
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 48.14
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 134.36
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 123.64
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 111.56
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 103.6
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 61.36
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 104.58
+    },
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 146.34
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 95.78
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 121.98
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 58.14
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 85.38
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 146.84
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 108.44
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 96.72
+    },
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 91.62
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 158.86
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 69.7
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 54.48
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 118.22
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 105.16
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 113.1
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 103.68
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 104.76
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 86
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 61.92
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 151.46
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 71.72
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.2",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 125.1
+    },
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 93.38
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 121.62
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 116.06
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 114.12
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 114.18
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.6",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 96.54
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 93
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 67.68
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 138.74
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 140.74
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 75.9
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 91.8
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 145.62
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 95.48
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 150.98
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 147.18
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 73.92
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 124.22
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 121.66
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "status": "postevent",
+   "is_playoffs": false,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 79.72
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 158.12
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.4",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 122.92
+    },
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 139.88
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 86.24
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 188.74
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": true,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.3",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 100.54
+    },
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 53.66
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": true,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 73.36
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 86.9
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.1",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 147.48
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 123.42
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 90.06
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 152.88
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.8",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.2",
+     "points": 109.82
+    },
+    {
+     "team_key": "449.l.535094.t.8",
+     "points": 133.04
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": true,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 93.4
+    },
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 105.78
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": true,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.11",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 87.54
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 121.86
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": true,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.6",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.6",
+     "points": 142.18
+    },
+    {
+     "team_key": "449.l.535094.t.10",
+     "points": 63.88
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.9",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.1",
+     "points": 124.56
+    },
+    {
+     "team_key": "449.l.535094.t.9",
+     "points": 147.78
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": true,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.5",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.3",
+     "points": 62
+    },
+    {
+     "team_key": "449.l.535094.t.5",
+     "points": 104.9
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": false,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.12",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.4",
+     "points": 118.38
+    },
+    {
+     "team_key": "449.l.535094.t.12",
+     "points": 119.38
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "status": "postevent",
+   "is_playoffs": true,
+   "is_consolation": true,
+   "is_tied": false,
+   "winner_team_key": "449.l.535094.t.7",
+   "teams": [
+    {
+     "team_key": "449.l.535094.t.7",
+     "points": 130.72
+    },
+    {
+     "team_key": "449.l.535094.t.11",
+     "points": 97.74
+    }
+   ]
+  }
+ ]
+}

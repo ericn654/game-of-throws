@@ -1,8 +1,12 @@
 {
   "display_name": "Game of Throws",
   "yahoo_league_id": "267485",
-  "current_league_key": "",
-  "names": {},
+  "current_league_key": "470.l.267485",
+  "names": {
+    "hidden:2018:9": "Rob",
+    "hidden:2019:4": "Boss Rob",
+    "user15017176": "My Team"
+  },
   "merge": {},
   "legacy_weights": {
     "title": 12,
@@ -12,7 +16,7 @@
     "last_place": -2
   },
   "power_weights": {
-    "record": 0.30,
+    "record": 0.3,
     "strength": 0.45,
     "form": 0.25,
     "form_weeks": 3

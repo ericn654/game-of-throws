@@ -36,6 +36,15 @@ GitHub Actions (Tue + Fri)
 5. **First sync** — **Actions → Sync league → Run workflow**. The site URL is
    shown on the deploy step.
 
+## While Yahoo API access is pending
+
+Yahoo now requires apps to be approved for Fantasy API access
+(sports.yahoo.com/developer/access). Until then, `tools/yahoo_web_scrape.js`
+reads each season from Yahoo's league pages in a signed-in browser, and
+`sync/import_web.py` turns that into `data/seasons/*.json`. Pushing data
+triggers **Publish site**. Once approved, re-enable the schedule in
+`.github/workflows/sync.yml`.
+
 ## Customizing
 
 `league.config.json`

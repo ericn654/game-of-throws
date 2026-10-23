@@ -127,7 +127,9 @@ def build(seasons, cfg):
         # playoffs
         po_teams = {side["team_key"] for m in winners_po for side in m["teams"]}
         for t in s["teams"]:
-            if t.get("playoff_seed") and s["is_finished"] and t["playoff_seed"] <= s["num_playoff_teams"]:
+            if t.get("made_playoffs"):
+                po_teams.add(t["team_key"])
+            elif t.get("playoff_seed") and s["is_finished"] and t["playoff_seed"] <= s["num_playoff_teams"]:
                 po_teams.add(t["team_key"])
         po_rec = defaultdict(lambda: [0, 0])
         for m in winners_po:

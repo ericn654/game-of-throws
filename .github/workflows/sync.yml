@@ -1,9 +1,12 @@
 name: Sync league
 
+# API sync. The weekly schedule is off until Yahoo approves API access
+# (see README). Until then the site is refreshed from Yahoo's web pages and
+# the "Publish site" workflow deploys it.
 on:
-  schedule:
-    - cron: "17 14 * * 2"   # Tuesdays ~7am Pacific, after Monday Night Football
-    - cron: "17 14 * * 5"   # Fridays, picks up Thursday night games
+  # schedule:
+  #   - cron: "17 14 * * 2"   # Tuesdays ~7am Pacific, after Monday Night Football
+  #   - cron: "17 14 * * 5"   # Fridays, picks up Thursday night games
   workflow_dispatch:
     inputs:
       full:
